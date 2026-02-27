@@ -1,55 +1,22 @@
 [versions]
-kotlin                = "2.0.0"
-agp                   = "8.3.2"
-compileSdk            = "34"
-minSdk                = "26"
-targetSdk             = "34"
-compose-multiplatform = "1.6.11"
-compose-material3     = "1.3.0"
-compose-activity      = "1.9.0"
-voyager               = "1.1.0"
-koin                  = "3.5.0"
-koin-compose          = "3.5.0"
-coroutines            = "1.8.1"
-serialization         = "1.7.1"
-sqldelight            = "2.0.2"
-datastore             = "1.1.1"
-media3                = "1.4.0"
-lifecycle             = "2.8.3"
+agp = "8.2.2"
+kotlin = "1.9.23"
+compose = "1.6.11"
+androidx-activityCompose = "1.8.2"
+voyager = "1.0.0"
+koin = "3.5.3"
+koinCompose = "1.1.2"
 
 [libraries]
-kotlin-stdlib                   = { module = "org.jetbrains.kotlin:kotlin-stdlib",                     version.ref = "kotlin" }
-kotlinx-coroutines-core         = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core",          version.ref = "coroutines" }
-kotlinx-coroutines-android      = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android",       version.ref = "coroutines" }
-kotlinx-serialization-json      = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json",       version.ref = "serialization" }
-compose-activity                = { module = "androidx.activity:activity-compose",                     version.ref = "compose-activity" }
-compose-material3               = { module = "androidx.compose.material3:material3",                   version.ref = "compose-material3" }
-compose-material-icons          = { module = "androidx.compose.material:material-icons-extended",       version = "1.6.8" }
-voyager-navigator               = { module = "cafe.adriel.voyager:voyager-navigator",                  version.ref = "voyager" }
-voyager-screenmodel             = { module = "cafe.adriel.voyager:voyager-screenmodel",                version.ref = "voyager" }
-voyager-koin                    = { module = "cafe.adriel.voyager:voyager-koin",                       version.ref = "voyager" }
-voyager-tab-navigator           = { module = "cafe.adriel.voyager:voyager-tab-navigator",              version.ref = "voyager" }
-voyager-transitions             = { module = "cafe.adriel.voyager:voyager-transitions",                version.ref = "voyager" }
-koin-core                       = { module = "io.insert-koin:koin-core",                               version.ref = "koin" }
-koin-android                    = { module = "io.insert-koin:koin-android",                            version.ref = "koin" }
-koin-compose                    = { module = "io.insert-koin:koin-compose",                            version.ref = "koin-compose" }
-koin-compose-viewmodel          = { module = "io.insert-koin:koin-compose-viewmodel",                  version.ref = "koin-compose" }
-sqldelight-android              = { module = "app.cash.sqldelight:android-driver",                     version.ref = "sqldelight" }
-sqldelight-native               = { module = "app.cash.sqldelight:native-driver",                      version.ref = "sqldelight" }
-sqldelight-coroutines           = { module = "app.cash.sqldelight:coroutines-extensions",              version.ref = "sqldelight" }
-datastore-preferences           = { module = "androidx.datastore:datastore-preferences",               version.ref = "datastore" }
-media3-exoplayer                = { module = "androidx.media3:media3-exoplayer",                       version.ref = "media3" }
-media3-session                  = { module = "androidx.media3:media3-session",                         version.ref = "media3" }
-media3-ui                       = { module = "androidx.media3:media3-ui",                              version.ref = "media3" }
-lifecycle-viewmodel             = { module = "androidx.lifecycle:lifecycle-viewmodel",                 version.ref = "lifecycle" }
-lifecycle-viewmodel-compose     = { module = "androidx.lifecycle:lifecycle-viewmodel-compose",         version.ref = "lifecycle" }
-lifecycle-runtime-compose       = { module = "androidx.lifecycle:lifecycle-runtime-compose",           version.ref = "lifecycle" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
 
 [plugins]
-android-application             = { id = "com.android.application",                        version.ref = "agp" }
-kotlin-multiplatform            = { id = "org.jetbrains.kotlin.multiplatform",             version.ref = "kotlin" }
-kotlin-android                  = { id = "org.jetbrains.kotlin.android",                  version.ref = "kotlin" }
-kotlin-serialization            = { id = "org.jetbrains.kotlin.plugin.serialization",     version.ref = "kotlin" }
-compose-multiplatform           = { id = "org.jetbrains.compose",                         version.ref = "compose-multiplatform" }
-compose-compiler                = { id = "org.jetbrains.kotlin.plugin.compose",           version.ref = "kotlin" }
-sqldelight                      = { id = "app.cash.sqldelight",                           version.ref = "sqldelight" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
