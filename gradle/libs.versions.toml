@@ -1,28 +1,16 @@
 [versions]
 agp = "8.2.2"
-kotlin = "1.9.23"
-compose = "1.6.11"
-voyager = "1.0.0"
-koin = "3.5.3"
-koinCompose = "1.1.2"
-serialization = "1.9.23"
-sqldelight = "2.0.1"
+kotlin = "2.0.20"
+compose-plugin = "1.7.0"
+androidx-activityCompose = "1.9.3"
 
 [libraries]
-# (Библиотеки оставляем как были или добавляем нужные)
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.8.2" }
-voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
-voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
-koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+# Сюда можно добавить библиотеки при необходимости
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }
-jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+# ВАЖНО: имя должно быть 'compose-multiplatform', чтобы работало 'libs.plugins.compose.multiplatform'
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
