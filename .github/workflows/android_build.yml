@@ -19,8 +19,13 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: Create local.properties
+      run: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
     - name: Build with Gradle
       run: ./gradlew :composeApp:assembleDebug
+      env:
+        ANDROID_HOME: ${{ runner.tool_cache }}/AndroidSDK
