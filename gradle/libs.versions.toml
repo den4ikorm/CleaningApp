@@ -1,12 +1,10 @@
 [versions]
-[versions]
 kotlin                = "2.0.0"
-agp                   = "8.3.2" # Понизили для совместимости
-compileSdk            = "34"    # Стабильнее для текущих плагинов
+agp                   = "8.3.2"
+compileSdk            = "34"
 minSdk                = "26"
 targetSdk             = "34"
 compose-multiplatform = "1.6.11"
-# остальные версии оставляем как были
 compose-material3     = "1.3.0"
 compose-activity      = "1.9.0"
 voyager               = "1.1.0"
